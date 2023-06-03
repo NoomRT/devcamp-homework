@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Homework #2</title>
+<style>
+    td {
+        width: 150px;
+    }
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+<form action="" style="margin: auto; width: 500px">
+    <fieldset>
+        <legend>Register Form</legend>
+        <table style="margin: auto">
+            <tr>
+                <td>Firstname: </td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>Lastname: </td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>Password: </td>
+                <td><input type="password"></td>
+            </tr>
+            <tr>
+                <td>Confirm Password: </td>
+                <td><input type="password"></td>
+            </tr>
+            <tr>
+                <td>Email: </td>
+                <td><input type="email"></td>
+            </tr>
+            <tr>
+                <td>Confirm Email: </td>
+                <td><input type="email"></td>
+            </tr>
+            <tr>
+                <td>Birthday: </td>
+                <td>
+                    <select id='day'>
+                    </select>
+                    <select id='month'>
+                    </select>
+                    <select id='year'>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td><input type='radio' name='gender' value='male' checked> Male <input type='radio' name='gender' value='female'>Female</td>
+            </tr>
+            <tr>
+                <td colspan=2>
+                    <div style='margin: auto; width: 120px'>
+                        <input type='submit'> <input type='reset'>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+</form>
+</body>
+
+</html>
+<script>
+    function createLotsOfOption(id, start, finish) {
+        let selectElement = $('#'+id);
+        for (let i = start; i <= finish; i++) {
+            selectElement.append($('<option>'+i+'</option>'));
+        }
+    }
+    
+    createLotsOfOption('day', 1, 31);
+    createLotsOfOption('month', 1, 12);
+    createLotsOfOption('year', 1980, 2005);
+</script>

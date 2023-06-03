@@ -1,0 +1,17 @@
+doctype html
+html(lang="en")
+  head
+    title= pageTitle
+    script(type='text/javascript').
+      if (foo) bar(1 + 5)
+  body
+    nav 
+        a(href="index.html") About Me |
+        a(href="skill.html") Skill |
+        a(href="contact.html") Contact Me |
+        a(href="portfolio.html") Portfolio
+    h1(style='text-align: center') Skill
+    #container.col
+      ul 
+        each val in ['Javascript', 'HTML', 'MySQL', 'Node.JS', 'Koa', 'Cloud Deployment', 'Algorithm: Data Structure']
+          li= val
