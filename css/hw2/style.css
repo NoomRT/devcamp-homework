@@ -1,0 +1,210 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(104, 241, 104);
+}
+
+nav ul li {
+    color: white;
+    font-weight: bolder;
+    margin-right: 10px;
+}
+
+nav ul li.logo {
+    width: 300px;
+    height: 100px;
+    background-color: white;
+}
+
+nav ul li.space {
+    width: 500px;
+}
+
+nav ul li:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+}
+
+section.hero {
+    position: relative;
+    background-color: rgb(104, 241, 104);
+}
+
+section img {
+    width: 1400px;
+    height: 800px;
+    position: relative;
+}
+
+section .floating-button {
+    display: flex;
+    flex-direction: column;
+}
+
+.button-more {
+    background-color: rgb(104, 241, 104);
+    color: white;
+    width: 300px;
+    height: 100px;
+    font-size: medium;
+    font-weight: 900;
+    border: none;
+    position: relative;
+}
+
+section button.plus, button.minus  {
+    background-color: rgb(104, 241, 104);
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    font-size: xx-large;
+    font-weight: 900;
+    margin: 20px;
+    border: none;
+    box-shadow: 5px 5px 10px gray;
+}
+
+section button:hover {
+    box-shadow: 5px 5px 10px black;
+}
+
+section button.plus {
+    position: absolute;
+    top: 300px;
+    left: 50px;
+}
+
+section button.minus {
+    position: absolute;
+    top: 400px;
+    left: 50px;
+}
+
+section .text-box {
+    padding: 100px;
+    position: absolute;
+    background-color: white;
+    border-left: 100px solid rgb(104, 241, 104, 0.2);
+    width: 700px;
+    height: 400px;
+    transform: translate(1100px, -600px);
+}
+
+section .text-box h1 span {
+        /*                                             ↓ y position */
+        background: linear-gradient(rgb(48, 255, 113), rgb(48, 255, 113)) 0 90% / 100% 8px no-repeat;
+        /*                                                        ↑ line height */
+}
+
+section .text-box button.button-more {
+    position: absolute;
+    bottom: -60px;
+    box-shadow: 0px 5px 20px gray;
+}
+
+section .socials > button {
+    background-color: rgb(104, 241, 104);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    font-size: medium;
+    font-weight: 900;
+    margin: 10px;
+    border: 1px solid white;
+    float: right;
+}
+
+main .content {
+    margin: 100px 300px;
+    display: flex;
+    flex-direction: row;
+}
+
+main .content div {
+    margin-right: 20px;
+}
+
+main .content .text-center {
+    margin: auto;
+    text-align: center;
+}
+
+section.about-us img {
+    width: 1000px;
+    height: 600px;
+}
+
+section .cards {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 100px 300px;
+    text-align: center;
+} 
+
+section .cards .card img {
+    width: 100px;
+    height: 100px;
+} 
+
+footer h1 {
+    margin-left: 300px;
+    margin-bottom: 30px;
+    margin-top: 50px;
+}
+
+footer p {
+    text-align: center;
+    margin: 100px;
+}
+
+footer .grid-footer {
+    margin-left: 300px;
+    margin-right: 300px;
+    display: grid;
+    grid-template-columns: repeat(3, 33%);
+}
+
+footer .grid-footer ul {
+    list-style: none;
+}
+
+footer .grid-footer ul li {
+    margin-bottom: 20px;
+}
+
+
+footer .grid-footer ul li .socials > button {
+    background-color: rgb(104, 241, 104);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    font-size: medium;
+    font-weight: 900;
+    border: 1px solid white;
+}
+
+footer .grid-footer ul li .socials > button {
+
+}
+
+@media screen and (max-width: 1350px) {
+    main .content {
+        flex-wrap: wrap;
+    }
+}
