@@ -1,0 +1,281 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+nav img {
+    margin-right: 20px;
+    width: 100px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-right: 40px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.call-banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 900;
+}
+
+.rotated {
+    writing-mode: tb-rl;
+    transform: rotate(-180deg);
+    color: #111;
+}
+
+.call-info {
+    width: 250px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.call-banner {
+    border-radius: 0px 0px 20px 20px; 
+    background-color: greenyellow; 
+    margin: 0px 10px; 
+    width: 50px; 
+    height: 130px;
+}
+
+header {
+    height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient(rgba(0,0,255,1),  rgba(255,0,0,0)), url(img/sean-pollock-PhYq704ffdA-unsplash.jpg);
+    background-size: cover;
+}
+/* Photo from Sean Pollock at https://unsplash.com/photos/PhYq704ffdA */
+
+header > .header-container {
+    margin: 0px 200px;
+}
+
+header button {
+    color: black;
+    background-color: aliceblue;
+    font-weight: bold;
+    border: 0px;
+    width: 30px;
+    height: 30px;
+    margin: 1px;
+}
+
+header button:hover {
+    background-color: white;
+}
+
+header button.active {
+    background-color: white;
+}
+
+header > .slide-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.slide-box > .box {
+    width: 400px;
+    height: 400px;
+    background-color: rgb(255, 255, 255, 0);
+    margin-top: 60px;
+    margin-bottom: 250px;
+    border: 3px solid #fff;
+    position: relative;
+}
+
+.slide-box > .box::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-top: 50px solid transparent;
+    border-right: 50px solid greenyellow;
+}
+
+.box > h1 {
+    position: relative;
+    top: 40px;
+    right: 40px;
+    background-color: #fff;
+    font-size: xx-large;
+    font-weight: 900;
+    padding: 10px;
+}
+
+.slide-box > .box .inside-box {
+    width: 400px;
+    height: 300px;
+    padding: 50px;
+    font-size: x-large;
+    color: #fff;
+}
+
+main {
+    height: auto;
+    width: 100vw;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 0px 200px;
+}
+
+.vision {
+    display: flex;
+    justify-content: space-around;
+}
+
+.vision > .img-vision-box {
+    position: relative;
+    bottom: 50px;
+    padding-right: 100px;
+}
+
+.vision > .img-vision-box::after {
+    content: "";
+    position: absolute;
+    border: 50px solid greenyellow;
+    top: 150px;
+}
+.vision > .vision-box {
+    padding: 100px;
+}
+.mission {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+
+.mission > section {
+    text-align: center;
+    padding: 20px;
+}
+
+.mission > section img {
+    border-radius: 100%;
+    width: 150px;
+    height: 150px;
+}
+
+.project-detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: ghostwhite;
+}
+
+.card-list-project {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0px 200px;
+    padding: 50px;
+    align-items: center;
+}
+
+.see-more-project {
+    font-size: large;
+    padding: 50px;
+    background-color: rgb(255, 255, 255, 0);
+    border: none;
+}
+
+.card-project {
+    margin: 10px;
+}
+
+.card-project img {
+    width: 300px;
+    height: 300px;
+}
+
+.card-detail {
+    background-color: #fff;
+    width: 300px;
+    height: 300px;
+    padding: 20px;
+}
+
+.slide-button {
+    font-size: xx-large;
+    font-weight: bolder;
+    background-color: rgb(255, 255, 255, 0);
+    border: none;
+}
+
+footer {
+    background-color: #111;
+    height: 50vh;
+    width: 100vw;
+    padding: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+footer .logo {
+    margin-right: 100px;
+}
+
+footer ul li {
+    margin-bottom: 20px;
+    list-style: none;
+    margin-right: 100px;
+}
+
+footer ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer p {
+    color: #fff;
+    margin-right: 500px;
+}
+
+@media screen and (max-width: 1450px) {
+    .vision {
+        flex-wrap: wrap;
+    }
+
+    footer p {
+        margin-right: auto;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .mission {
+        flex-wrap: wrap;
+    }
+    .card-list-project {
+        flex-wrap: wrap;
+    }
+}
