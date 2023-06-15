@@ -111,10 +111,10 @@ section .text-box {
   padding: 100px;
   position: absolute;
   background-color: white;
-  box-shadow: -100px 0px 0px 0px rgba(48, 255, 113, .3);       
   width: 700px;
   height: 400px;
   transform: translate(1100px, -600px);
+  box-shadow: 5px 5px 10px rgba(21, 21, 21, 0.3),-100px 0px 0px 0px rgba(48, 255, 113, .3);       
 }
 
 span {
@@ -126,6 +126,7 @@ span {
 section .text-box button.button-more {
   position: absolute;
   bottom: -60px;
+  right: 250px;
   box-shadow: 0px 5px 20px gray;
 }
 
@@ -196,7 +197,7 @@ section.about-us img {
   padding: 50px;
   position: absolute;
   background-color: white;
-  box-shadow: -100px 0px 0px 0px rgba(48, 255, 113, .3);       
+  box-shadow: 5px 5px 10px rgba(21, 21, 21, 0.3),-100px 0px 0px 0px rgba(48, 255, 113, .3);       
   width: 600px;
   height: 400px;
   transform: translate(1100px, -550px);
