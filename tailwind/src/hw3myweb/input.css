@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@tailwind base;
+
+@layer base {
+  h1 {
+    @apply text-2xl font-bold;
+  }
+  h2 {
+    @apply text-xl font-bold;
+  }
+  h3 {
+    @apply text-lg font-bold;
+  }
+}
+
+
+.list-navbar {
+  @apply text-[1em] font-bold no-underline;
+}
+
+.input-box {
+  @apply p-[30px] text-[1em] rounded-[20px] w-[100%] border-[2px] border-solid border-gray-400 mb-[10px] mt-[10px];
+}
+
+.btn-filter {
+  @apply px-[20px] py-[10px] bg-[#8d8d8d] text-white rounded-[10px] text-[1em] border-none m-[10px];
+}
+
+.btn-filter-active {
+  @apply px-[20px] py-[10px] bg-gray-900 text-white rounded-[10px] text-[1em] border-none m-[10px];
+}
+
+.cards {
+  @apply flex justify-around flex-wrap;
+}
+
+.card {
+  @apply p-[20px] w-[330px] rounded-[10px] shadow-[0px_3px_5px_gray] m-[20px];
+}
+
+.card-img {
+  @apply block w-[300px] rounded-[10px] m-auto;
+}
+
+.footer-li {
+  @apply mb-[20px];
+}

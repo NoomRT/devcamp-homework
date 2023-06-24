@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@tailwind base;
+
+@layer base {
+  h1 {
+    @apply text-2xl font-bold;
+  }
+  h2 {
+    @apply text-xl font-bold;
+  }
+  h3 {
+    @apply text-lg font-bold;
+  }
+  h4 {
+    @apply text-base font-bold;
+  }
+}
+
+.li-navbar {
+  @apply text-white font-bold text-base mr-[10px];
+}
+
+.li-navbar:hover {
+  @apply underline decoration-[3px];
+}
+
+.btn-plus-and-minus {
+  @apply bg-[#68f168] text-white w-[60px] h-[60px] rounded-full text-2xl font-black border-none shadow-[5px_5px_10px_gray];
+ }
+
+ .btn-plus-and-minus:hover {
+  @apply shadow-[5px_5px_10px_black];
+ }
+
+ .btn-more, .btn-live-chat {
+  @apply bg-[#68f168] text-white w-[300px] h-[100px] font-black text-xl border-none relative;
+ }
+
+ .btn-socials {
+  @apply bg-[#68f168] text-white w-[40px] h-[40px] rounded-full font-medium text-xl m-[10px] border-[1px] border-solid border-white float-right relative top-[-70px] right-[100px];
+ }
+
+ .underline-span {
+    background: linear-gradient(rgb(48, 255, 113), rgb(48, 255, 113)) 0 90% / 100% 8px no-repeat;
+ }
+
+ .footer-list {
+  @apply list-none mb-[20px];
+ }
+
+ .btn-footer-socials {
+  @apply bg-[#68f168] text-white w-[40px] h-[40px] rounded-full font-medium text-xl border-[1px] border-solid border-white;
+ }
+
+ .btn-to-top {
+  @apply bg-[#68f168] text-white w-[100px] h-[100px] font-black text-xl border-none;
+ }

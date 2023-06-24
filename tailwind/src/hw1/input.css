@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@tailwind base;
+
+@layer base {
+  h1 {
+    @apply text-2xl font-bold;
+  }
+  h2 {
+    @apply text-xl font-bold;
+  }
+  h3 {
+    @apply text-lg font-bold;
+  }
+}
+
+.header-img-cover {
+  background-image: linear-gradient(rgb(48, 144, 255),  rgba(255,0,0,0)), url(/src/hw1/img/sean-pollock-PhYq704ffdA-unsplash.jpg);
+}
+
+.btn {
+    @apply text-black bg-[#f0f8ff] font-bold border-none w-[30px] h-[30px] m-1;
+}
+
+.btn:hover {
+    @apply bg-white;
+}
+
+.btn-active {
+    @apply bg-white;
+}

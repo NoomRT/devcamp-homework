@@ -1,0 +1,391 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif, Arial, Helvetica;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 200px;
+  margin-right: 200px;
+  padding: 30px;
+}
+
+nav div.logo {
+  padding: 10px 30px;
+  text-align: center;
+}
+
+nav i {
+  font-size: 3em;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav ul li a,
+button.btn-navbar {
+  font-size: 1em;
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+  margin-left: 30px;
+}
+
+nav ul li button.btn-navbar {
+  padding: 10px 30px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 3px;
+}
+
+header .container {
+  margin-top: 50px;
+  margin-left: 200px;
+  margin-right: 200px;
+  position: relative;
+}
+
+header img {
+  border-radius: 100px;
+  object-fit: cover;
+  width: 100%;
+  height: 500px;
+}
+
+header .container .content {
+  position: absolute;
+  top: 70px;
+  left: 100px;
+}
+
+header .container .content h1 {
+  font-size: 3em;
+  color: white;
+  text-shadow: 3px 3px 5px gray;
+  margin-bottom: 20px;
+}
+
+header .container .content {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  margin-right: 100px;
+  grid-gap: 10px;
+}
+
+header .container .content p {
+  font-size: 1.2em;
+  color: white;
+}
+
+header .container .content .search-box {
+  padding: 30px;
+  background-color: white;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+header .container .content .search-box input[type="text"],
+input[type="date"] {
+  padding: 30px;
+  font-size: 1em;
+  border-radius: 20px;
+  width: 100%;
+  border: 2px solid gray;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+header .container .content .search-box button.find-now {
+  padding: 20px 50px;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  font-size: 1.5em;
+  font-weight: 700;
+  border: none;
+}
+
+header .container .content .search-box button.find-now:hover {
+  background-color: #5b5b5b;
+}
+
+main .container {
+  margin-top: 50px;
+  margin-left: 200px;
+  margin-right: 200px;
+}
+
+main .container h1 {
+  margin-bottom: 20px;
+}
+main .container .btn-filter {
+  margin: 5px;
+}
+
+main .container .btn-filter > button {
+  padding: 10px 20px;
+  background-color: #8d8d8d;
+  color: rgb(255, 255, 255);
+  border-radius: 10px;
+  font-size: 1em;
+  border: none;
+  margin: 10px;
+}
+
+main .container .btn-filter > button.active {
+  background-color: #212121;
+  color: white;
+}
+
+main .content .cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+main .content .cards .card {
+  padding: 20px;
+  width: 350px;
+  border-radius: 10px;
+  box-shadow: 0px 3px 5px gray;
+  margin: 20px;
+}
+
+main .content .cards .card img {
+  display: block;
+  width: 300px;
+  border-radius: 10px;
+  margin: auto;
+}
+
+main .content .cards .card h3 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+main .content .cards .card p {
+  color: gray;
+}
+
+main .content .cards .card ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+main .content .cards .card ul li i {
+  background-color: #ffdee3;
+  border-radius: 100%;
+  padding: 5px;
+  margin-top: 20px;
+}
+
+section .content {
+  margin: 100px 300px;
+  display: flex;
+  flex-direction: row;
+}
+
+section .content div {
+  width: 100%;
+  margin-right: 20px;
+}
+
+section .content div img {
+  width: 100%;
+  height: auto;
+}
+
+section .content .text-center {
+  margin: auto;
+  text-align: center;
+}
+
+section .cards {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 100px 200px;
+  text-align: center;
+}
+
+section .cards .card {
+  padding: 10px;
+}
+
+section .cards .card i {
+  color: #675561;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+section .cards .card h1,
+p {
+  margin-bottom: 20px;
+}
+
+footer {
+  padding-bottom: 100px;
+  background-color: #e4e4e4;
+}
+
+footer h1 {
+  margin-left: 300px;
+  margin-bottom: 30px;
+  margin-top: 50px;
+}
+
+footer section.head-footer > img {
+  width: 100%;
+  height: 400px;
+}
+
+footer h1 {
+  margin-top: 50px;
+  margin-left: 300px;
+  margin-bottom: 40px;
+}
+
+footer p {
+  text-align: center;
+  padding-top: 40px;
+}
+
+footer .grid-footer {
+  margin-left: 300px;
+  margin-right: 300px;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(4, 25%);
+}
+
+footer .grid-footer ul {
+  list-style: none;
+  padding-right: 20px;
+}
+
+footer .grid-footer ul li {
+  margin-bottom: 20px;
+}
+
+footer .grid-footer ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+footer .grid-footer ul li .socials > button {
+  background-color: black;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  font-size: medium;
+  font-weight: 900;
+  border: 1px solid white;
+}
+
+@media screen and (max-width: 1410px) {
+    footer .grid-footer {
+        grid-template-columns: repeat(auto-fit, 300px);
+      }
+}
+
+@media screen and (max-width: 1330px) {
+  header .container .content {
+    grid-template-columns: 100%;
+    margin-right: 100px;
+  }
+
+  header img {
+    height: 100vh;
+  }
+
+  header .container .content .search-box {
+    margin-top: 50px;
+  }
+
+  header .container .content p {
+    font-size: 1.5em;
+    text-shadow: 3px 3px 5px gray;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  header .container .content .search-box {
+    margin-top: 10px;
+  }
+
+  section .content {
+    flex-wrap: wrap;
+  }
+
+  section .content div {
+    width: 100%;
+    margin-right: 20px;
+  }
+
+  section .cards {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 1170px) {
+  nav {
+    display: block;
+    text-align: center;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+  }
+
+  nav ul > li a,
+  button.btn-navbar {
+    margin-left: 0;
+  }
+
+  nav ul li button.btn-navbar {
+    margin-top:  10px;
+  }
+
+  nav ul li > a {
+    display: block;
+    padding: 20px 40px;
+  }
+
+  nav ul li a:hover {
+    background-color: #bebebe;
+  }
+
+  nav ul li:hover > a {
+    color: white;
+  }
+
+  nav ul {
+    display: block;
+  }
+  header .container .content .search-box {
+    margin-top: 10px;
+  }
+
+}
+
+@media screen and (max-width: 900px) {
+  header img {
+    height: 1100px;
+  }
+  header .container .content .search-box {
+    margin-top: 2px;
+  }
+}
