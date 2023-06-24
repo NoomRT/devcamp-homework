@@ -1,4 +1,4 @@
-#Tailwind CLI build process
+# Tailwind CLI build process
 
 npx tailwindcss -i ./src/hw1/input.css -o ./dist/hw1/output.css --watch
 
