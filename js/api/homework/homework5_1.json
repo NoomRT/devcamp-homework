@@ -1,0 +1,47 @@
+[
+    {
+        "firstname": "Java",
+        "lastname": "Script",
+        "age": "16",
+        "gender": "male",
+        "address": {
+            "sub_district":"Pa O Don Chai",
+            "distrcit":"Mueang Chiang Rai",
+            "province":"Chaing ฑai"
+        },
+        "contact": {
+            "mobile": "0877777777",
+            "email": "javascript@email.com"
+        }
+    },
+    {
+        "firstname": "Hello",
+        "lastname": "World",
+        "age": "33",
+        "gender": "male",
+        "address": {
+            "sub_district":"Pa Tong",
+            "distrcit":"Kathu",
+            "province":"Phuket"
+        },
+        "contact": {
+            "mobile": "0888888888",
+            "email": "helloworld@email.com"
+        }
+    },
+    {
+        "firstname": "If",
+        "lastname": "Else",
+        "age": "26",
+        "gender": "female",
+        "address": {
+            "sub_district":"Hua Hin",
+            "distrcit":"Hua Hin",
+            "province":"Prachuap Khiri Khan"
+        },
+        "contact": {
+            "mobile": "0899999999",
+            "email": "ifelse@email.com"
+        }
+    }
+]

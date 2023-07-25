@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homework 1.2</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        table, th, tr, td {
+          @apply p-3 border-[2px] text-lg rounded-sm border-gray-400 border-solid;
+        }
+        th {
+          @apply bg-gray-200;
+        }
+      }
+    </style>
+  </head>
+  <body class="">
+    <div class="grid place-items-center p-[50px]">
+      <h1 class="text-center text-4xl font-bold mb-[50px]">
+        Corona Report!
+      </h1>
+      <div id="tableId"></div>
+    </div>
+    <script>
+      let covidData = {};
+      let tHeadArr = [
+        "Category",
+        "cases",
+        "todayCases",
+        "deaths",
+        "todayDeaths",
+        "recovered",
+        "todayRecovered",
+        "active",
+        "critical",
+      ];
+
+      const callback = function (response) {
+        console.log(response);
+      };
+
+      function getWorldCovidData(callback) {
+        axios
+          .get("https://corona.lmao.ninja/v3/covid-19/all")
+          .then(function (response) {
+            callback(response);
+          });
+      }
+      function getThailandCovidData(callback) {
+        axios
+          .get("https://corona.lmao.ninja/v3/covid-19/countries/thailand")
+          .then(function (response) {
+            callback(response);
+          });
+      }
+
+      getWorldCovidData(function (responseWorld) {
+        getThailandCovidData(function (responseThailand) {
+          covidData = {
+            "World": {
+              "cases": responseWorld.data.cases,
+              "todayCases": responseWorld.data.todayCases,
+              "deaths": responseWorld.data.deaths,
+              "todayDeaths": responseWorld.data.todayDeaths,
+              "recovered": responseWorld.data.recovered,
+              "todayRecovered": responseWorld.data.todayRecovered,
+              "active": responseWorld.data.active,
+              "critical": responseWorld.data.critical,
+            },
+            "Thailand": {
+              "cases": responseThailand.data.cases,
+              "todayCases": responseThailand.data.todayCases,
+              "deaths": responseThailand.data.deaths,
+              "todayDeaths": responseThailand.data.todayDeaths,
+              "recovered": responseThailand.data.recovered,
+              "todayRecovered": responseThailand.data.todayRecovered,
+              "active": responseThailand.data.active,
+              "critical": responseThailand.data.critical,
+            },
+          }
+          console.log(covidData);
+          const tableId = document.getElementById("tableId");
+          const table = document.createElement("table");
+          const thead = table.createTHead();
+          const trTHead = thead.insertRow();
+
+          for (const i in tHeadArr) {
+            const th = document.createElement("th");
+            th.textContent = tHeadArr[i];
+            trTHead.appendChild(th);
+          }
+
+          for (const keyCountry in covidData) {
+              const tdCountry = document.createElement("td");
+              const tr = table.insertRow();
+              tr.appendChild(tdCountry);
+              tdCountry.textContent = keyCountry;
+              for (const values in covidData[keyCountry]) {
+                const tdData = document.createElement("td");
+                tdData.textContent += covidData[keyCountry][values];
+                tr.appendChild(tdData);
+              }
+            }
+          tableId.appendChild(table);
+        
+        });
+      });
+    </script>
+  </body>
+</html>

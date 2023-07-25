@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 1.2</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="">
+    <div class="grid place-items-center p-[50px]">
+        <h1 class="text-center text-4xl font-bold mb-[50px]">Hello ReqRes users!</h1>
+        <table class="">
+            <tr id="rowDisplay"></tr>
+        </table>
+    </div>
+    <script>
+        axios.get("https://reqres.in/api/users").then(function (response) {
+            let rowDisplay = document.getElementById('rowDisplay');
+            let textHtml = '';
+            for (let i = 0; i < response.data.data.length; i++) {
+                let p = "<p class='text-center mb-[10px] font-bold'>" + response.data.data[i].first_name + "</p>";
+                p += "<p class='mb-[10px]'>" + response.data.data[i].email +"</p>";
+                let img = "<img class='block m-auto' src='" + response.data.data[i].avatar + "'>";
+                textHtml += "<td class='p-[10px]'>" + p + img + "</td>";
+            }
+            rowDisplay.innerHTML = textHtml;
+        })
+    </script>
+</body>
+</html>

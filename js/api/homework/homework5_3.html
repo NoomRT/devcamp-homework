@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 3</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="">
+    <div class="grid place-items-center p-[50px]">
+        <h1 class="text-center text-4xl font-bold mb-[50px]">Hello ReqRes users!</h1>
+        <table>
+            <tr id="rowDisplay"></tr>
+        </table>
+    </div>
+    <script>
+        const aUser = []
+        const aLastName = []
+        const getData = []
+        const callback = function (response) {
+            console.log(response);
+        }
+
+        function getUser(callback) {
+            axios.get("https://reqres.in/api/users").then(function (response) {
+                callback(response);
+            })
+        }
+
+        function getGender(callback, firstName) {
+            axios.get("https://api.genderize.io?name=" + firstName).then(function (response) {
+                callback(response);
+            })
+        } 
+
+        function getAge(callback, firstName) {
+            axios.get("https://api.agify.io/?name=" + firstName).then(function (response) {
+                callback(response);
+            })
+        }
+
+        getUser(function (responseUser) {
+            for (const values of Object.keys(responseUser.data.data)){
+                aLastName.push(responseUser.data.data[values].last_name)
+                getData.push(responseUser.data.data[values])
+                getGender(function (responseGender) {
+                getAge(function (responseAge) {
+                        getData[values].gender = responseGender.data.gender;
+                        getData[values].age = responseAge.data.age;
+                        console.log(getData[values]);
+                        aUser.push(getData[values]);
+                        createTable(aUser);
+                    }, getData[values].first_name)
+                }, getData[values].first_name)
+            }
+            console.log(aLastName);                        
+        })
+
+
+        function createTable(users) {
+            let rowDisplay = document.getElementById('rowDisplay');
+            let textHtml = '';
+            for (let i = 0; i < users.length; i++) {
+                let p = "<p class='text-center mb-[10px] font-bold'>" + users[i].first_name + "</p>";
+                p += "<p class='text-center mb-[10px]'>" + users[i].email +"</p>";
+                p += "<p class='text-center mb-[10px]'>" + users[i].gender +"</p>";
+                p += "<p class='text-center mb-[10px]'>" + users[i].age +"</p>";
+                let img = "<img class='block m-auto' src='" + users[i].avatar + "'>";
+                textHtml += "<td class='p-[10px]'>" + p + img + "</td>";
+            }
+            rowDisplay.innerHTML = textHtml;
+        }
+        createTable(users);
+    </script>
+</body>
+</html>
